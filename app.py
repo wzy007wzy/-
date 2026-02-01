@@ -21,7 +21,8 @@ if st.button("开始计算"):
             
             # 获取基金持仓 (默认获取最新日期)
             # AkShare 接口：fund_portfolio_em
-            portfolio_df = ak.fund_portfolio_em(symbol=fund_code)
+            portfolio_df = ak.fund_portfolio_hold_em(symbol=fund_code, date="2024")
+
             
             # 简单清洗数据：只要 股票代码、股票名称、占净值比例
             # 注意：接口返回的列名是中文
